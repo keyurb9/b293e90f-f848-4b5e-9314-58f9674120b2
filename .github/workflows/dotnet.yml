@@ -37,7 +37,7 @@ jobs:
       run: dotnet tool install -g dotnet-coverage
           
     - name: Get Code Coverage
-      run: dotnet-coverage collect dotnet run --project ./Lis/Lis.csproj -f cobertura
+      run: dotnet-coverage collect dotnet run --project ./LIS/LIS.csproj -f cobertura
       
     - name: Publish coverage
       uses: irongut/CodeCoverageSummary@v1.3.0
