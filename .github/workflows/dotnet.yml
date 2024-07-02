@@ -20,11 +20,29 @@ jobs:
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: 8.0.x
+    
     - name: Restore dependencies
       run: dotnet restore ./LIS/LIS.csproj
+    
     - name: Restore test dependencies
       run: dotnet restore ./LisTest/LisTest.csproj
+    
     - name: Build
       run: dotnet build ./LIS/LIS.csproj  --no-restore
+    
     - name: Test
       run: dotnet test ./LisTest/ --verbosity normal
+
+    - name: Publish coverage
+      uses: irongut/CodeCoverageSummary@v1.3.0
+      with:
+        filename: '**/TestResults/**/coverage.cobertura.xml'
+        badge: true
+        fail_below_min: true
+        format: markdown
+        indicators: true
+        output: both
+        thresholds: '30 60'
+        
+    - name: Write to Job Summary
+      run: cat code-coverage-results.md >> $GITHUB_STEP_SUMMARY
