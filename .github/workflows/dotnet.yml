@@ -33,6 +33,9 @@ jobs:
     - name: Test
       run: dotnet test ./LisTest/ --verbosity normal
 
+    - name: Install dotnet-coverage globally
+      run: dotnet tool install -g dotnet-coverage
+          
     - name: Get Code Coverage
       run: dotnet-coverage collect dotnet run --project ./Lis/Lis.csproj -f cobertura
       
