@@ -6,7 +6,7 @@ namespace LIS;
 public class Program
 {
     public static string findLIS(string vals)
-    {  
+    {
         int[] intArr = Array.ConvertAll(vals.Split(' '), int.Parse);
 
         List<int> subSeq = new List<int>();
@@ -32,7 +32,7 @@ public class Program
             }
             else
             {
-                if(curr > prev) tempSubSeq.Add(curr); //last value is still relevent
+                if (curr > prev) tempSubSeq.Add(curr); //last value is still relevent
 
                 if (tempSubSeq.Count > subSeq.Count)
                 {

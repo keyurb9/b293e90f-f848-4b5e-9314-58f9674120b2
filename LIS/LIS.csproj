@@ -5,6 +5,15 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+	<EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
   </PropertyGroup>
+
+  <ItemGroup>
+    <EditorConfigFiles Remove="E:\Demo Apps\b293e90f-f848-4b5e-9314-58f9674120b2\LIS\.editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="E:\Demo Apps\b293e90f-f848-4b5e-9314-58f9674120b2\LIS\.editorconfig" />
+  </ItemGroup>
 
 </Project>
