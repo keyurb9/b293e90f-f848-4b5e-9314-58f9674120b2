@@ -22,6 +22,7 @@ jobs:
         dotnet-version: 8.0.x
     - name: Restore dependencies
       run: dotnet restore ./LIS/LIS.csproj
+    - name: Restore test dependencies
       run: dotnet restore ./LisTest/LisTest.csproj
     - name: Build
       run: dotnet build ./LIS/LIS.csproj  --no-restore
