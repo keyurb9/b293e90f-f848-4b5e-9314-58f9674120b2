@@ -32,17 +32,3 @@ jobs:
     
     - name: Test
       run: dotnet test ./LisTest/ --verbosity normal
-
-    - name: Publish coverage
-      uses: irongut/CodeCoverageSummary@v1.3.0
-      with:
-        filename: coverage.xml
-        badge: true
-        fail_below_min: true
-        format: markdown
-        indicators: true
-        output: both
-        thresholds: '30 60'
-        
-    - name: Write to Job Summary
-      run: cat code-coverage-results.md >> $GITHUB_STEP_SUMMARY
