@@ -27,4 +27,4 @@ jobs:
     - name: Build
       run: dotnet build ./LIS/LIS.csproj  --no-restore
     - name: Test
-      run: dotnet test ./LisTest/LisTest.csproj  --no-build --verbosity normal
+      run: dotnet test ./LisTest/  --no-build --verbosity normal
